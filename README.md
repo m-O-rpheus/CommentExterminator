@@ -8,5 +8,12 @@ Die Klasse "CommentExterminator" stellt Methoden bereit, um HTML-, CSS- und Java
 
 ---
 
+### Low-level framework without dependencies:
+```
+CommentExterminator-main
+```
+
+---
+
 #### Update 1.0.0 Changelog:
 - Init
