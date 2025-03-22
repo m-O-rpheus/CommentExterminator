@@ -1,6 +1,6 @@
 # CommentExterminator
 ## by Markus Jäger
-### Version 1.0.0
+### Version 1.0.1
 
 ---
 
@@ -14,6 +14,9 @@ CommentExterminator-main
 ```
 
 ---
+
+#### Update 1.0.1 Changelog:
+- Optimize Code.
 
 #### Update 1.0.0 Changelog:
 - Init
