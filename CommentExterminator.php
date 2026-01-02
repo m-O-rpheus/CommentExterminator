@@ -1,7 +1,21 @@
 <?php
 
 
-	class CommentExterminator { // CommentExterminator::xxx();
+/*
+ * CommentExterminator
+ *
+ * This repository is licensed under the MIT License.
+ * 
+ * Any use, copy, modification, or redistribution of this repository
+ * or any substantial portion of it must retain attribution to the
+ * original author and the original GitHub repository.
+ * 
+ * Copyright (c) 2026 Markus Jäger
+ * https://github.com/m-O-rpheus/CommentExterminator
+ */
+
+
+	class CommentExterminator {
 
 
 		// Removes comments (Inline, Block, HTML) and reduces whitespace.
