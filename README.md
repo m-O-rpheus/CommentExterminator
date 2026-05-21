@@ -1,13 +1,13 @@
 # CommentExterminator
 ## by Markus Jäger
-### Version 1.0.3
+### Version 1.0.4
 
 ---
 
 The methods provided by CommentExterminator are intended for the lightweight minification of HTML, CSS, and JavaScript code.
 
 The focus of this project is not on complex parsing logic or full syntax awareness.
-Instead, the implementation deliberately uses simple, fast, and purpose-driven replace operations (regular expressions) to remove comments and reduce unnecessary whitespace.
+Instead, the implementation uses simple, fast, pattern-based operations (regular expressions) to remove comments and reduce unnecessary whitespace.
 
 This approach ensures:
 - very low overhead
@@ -29,9 +29,7 @@ var count = 0;
 count++;
 ';
 
-$js = CommentExterminator::remove_inline_comment( $js );
-$js = CommentExterminator::remove_block_comment( $js );
-$js = CommentExterminator::reduce_whitespace_comment( $js );
+$js = CommentExterminator::clean_javascript( $js );
 
 echo $js;
 // Output: var count = 0; count++;
@@ -49,8 +47,7 @@ body {
 }
 ';
 
-$css = CommentExterminator::remove_block_comment( $css );
-$css = CommentExterminator::reduce_whitespace_comment( $css );
+$css = CommentExterminator::clean_css( $css );
 
 echo $css;
 // Output: body { background: #fff; margin: 0; }
@@ -67,8 +64,7 @@ $html = '
 </div>
 ';
 
-$html = CommentExterminator::remove_html_comment( $html );
-$html = CommentExterminator::reduce_whitespace_comment( $html );
+$html = CommentExterminator::clean_html( $html );
 
 echo $html;
 // Output: <div class="container"> <h1> Hello World </h1> </div>
@@ -95,14 +91,17 @@ CommentExterminator-main
 
 ---
 
+#### Version 1.0.4 Changelog:
+- Added new public functions and naming cleanup for clean_javascript, clean_css, clean_html.
+
 #### Version 1.0.3 Changelog:
 - Added LICENSE file and license info in source code.
 
 #### Version 1.0.2 Changelog:
-- Optimize Code.
+- Optimized code.
 
 #### Version 1.0.1 Changelog:
-- Optimize Code.
+- Optimized code.
 
 #### Version 1.0.0 Changelog:
-- Init
+- Initial release.
