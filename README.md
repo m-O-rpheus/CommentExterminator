@@ -1,6 +1,6 @@
 # CommentExterminator
 ## by Markus Jäger
-### Version 1.0.6
+### Version 1.0.7
 
 ---
 
@@ -94,6 +94,9 @@ CommentExterminator-main
 ```
 
 ---
+
+#### Version 1.0.7 Changelog:
+- Code style: removed trailing whitespace in the license header. No functional changes.
 
 #### Version 1.0.6 Changelog:
 - README: Added the limitation for `//` inside a single-line block comment.
