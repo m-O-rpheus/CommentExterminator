@@ -46,9 +46,9 @@
 
 
 		// Removes markup (HTML-style) comments that start with <!-- and end with -->.
-		// 1. <!--:       Recognizes the start of a markup comment (escaped because < and ! have special meanings in regex).
+		// 1. <!--:       Recognizes the start of a markup comment (no escaping needed, these characters have no special meaning in this pattern).
 		// 2. .*?:        Removes all content between <!-- and -->, non-greedy.
-		// 3. -->:        Recognizes the end of the markup comment (escaped).
+		// 3. -->:        Recognizes the end of the markup comment.
 		// 4. s modifier: Allows matching of the dot (.) over line breaks.
 		private static function strip_markup_comments( string $str ) : string {
 
@@ -59,7 +59,7 @@
 
 		// Reduces consecutive whitespace characters to a single space.
 		// 1. \s+:        Matches one or more whitespace characters (spaces, tabs, newlines).
-		// 2. ' ':        Replaces them with a single space.
+		// 2. ' ':        Replaces them with a single space. Leading and trailing whitespace is removed with trim().
 		private static function collapse_whitespace( string $str ) : string {
 
 			/** @var string */
