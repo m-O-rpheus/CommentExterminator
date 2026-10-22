@@ -23,7 +23,7 @@
 
 		// Removes inline comments that start with //.
 		// 1. (^|\s):     Checks if the comment is at the beginning of the line or follows whitespace.
-		// 2. \/\/:       Recognizes the // comment marker (escaped because / has a special meaning in regex).
+		// 2. \/\/:       Recognizes the // comment marker (escaped because / is the pattern delimiter).
 		// 3. .*$:        Removes the comment content until the end of the line.
 		// 4. m modifier: Makes $ match the end of each line, not just the end of the string.
 		private static function strip_inline_comments( string $str ) : string {
@@ -34,7 +34,7 @@
 
 
 		// Removes multi-line comments that start with /* and end with */.
-		// 1. \/\*:       Recognizes the /* comment marker (escaped because / and * have special meanings in regex).
+		// 1. \/\*:       Recognizes the /* comment marker (escaped because / is the pattern delimiter and * is a quantifier).
 		// 2. .*?:        Removes all content between /* and */, non-greedy.
 		// 3. \*\/:       Recognizes the */ comment marker (escaped).
 		// 4. s modifier: Allows matching of the dot (.) over line breaks.

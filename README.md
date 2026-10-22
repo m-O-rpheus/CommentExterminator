@@ -1,6 +1,6 @@
 # CommentExterminator
 ## by Markus Jäger
-### Version 1.0.5
+### Version 1.0.6
 
 ---
 
@@ -69,6 +69,7 @@ echo $html;
 ## Limitations
 The pattern-based approach does not recognize strings, template literals or regular expression literals. Keep this in mind for the code that is minified:
 - **JavaScript:** a ` //` with whitespace before it inside a string removes the rest of the line (`"see: //example.com"` breaks the code). `//` without whitespace before it, e.g. in `"http://example.com"`, is kept.
+- **JavaScript:** a ` //` inside a single-line block comment (`/* a // b */ var c = 1;`) removes the rest of the line including `*/` and the following code, because inline comments are removed before block comments. Multi-line block comments with `//` inside are not affected.
 - **JavaScript and CSS:** `/* … */` inside a string is removed (`"/* keep */"` becomes `""`, also in CSS `content: "/* x */"`).
 - **JavaScript:** line breaks and indentation inside template literals are collapsed to a single space. Code without semicolons that relies on automatic semicolon insertion is joined into one line.
 - **HTML:** whitespace inside `<pre>` and `<textarea>` is collapsed, and `<!-- … -->` is also removed inside `<script>` and inside attribute values.
@@ -93,6 +94,10 @@ CommentExterminator-main
 ```
 
 ---
+
+#### Version 1.0.6 Changelog:
+- README: Added the limitation for `//` inside a single-line block comment.
+- Comments: Corrected the explanation of the escaped `/` in strip_inline_comments() and strip_block_comments() (`/` is the pattern delimiter). No functional changes.
 
 #### Version 1.0.5 Changelog:
 - README: Added the section "Limitations" (strings, template literals, code without semicolons, `<pre>` and `<textarea>`), removed the outdated "Last check" lines from the examples and added the `---` separator before the license notice.
