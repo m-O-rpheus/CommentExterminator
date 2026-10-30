@@ -1,6 +1,6 @@
 # CommentExterminator
 ## by Markus Jäger
-### Version 1.0.8
+### Version 1.0.9
 
 ---
 
@@ -76,6 +76,11 @@ The pattern-based approach does not recognize strings, template literals or regu
 
 ---
 
+## Requirements
+- **PHP:** 8.3 or higher
+
+---
+
 ## Attribution / License Notice
 This repository is licensed under the MIT License.
 
@@ -94,6 +99,9 @@ CommentExterminator-main
 ```
 
 ---
+
+#### Version 1.0.9 Changelog:
+- README: new section "Requirements" (PHP 8.3 or higher, PHP extensions, PHP settings, browser, repositories, other requirements), structured the same in all repositories. No functional changes.
 
 #### Version 1.0.8 Changelog:
 - Code style: the README examples are indented with tabs instead of four spaces. No functional changes.
