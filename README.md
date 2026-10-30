@@ -1,6 +1,6 @@
 # CommentExterminator
 ## by Markus Jäger
-### Version 1.0.7
+### Version 1.0.8
 
 ---
 
@@ -40,8 +40,8 @@ echo $js;
 $css = '
 /* Main styles */
 body {
-    background: #fff;
-    margin: 0;
+	background: #fff;
+	margin: 0;
 }
 ';
 
@@ -56,7 +56,7 @@ echo $css;
 $html = '
 <!-- Page comment -->
 <div class="container">
-    <h1> Hello World </h1>
+	<h1> Hello World </h1>
 </div>
 ';
 
@@ -94,6 +94,9 @@ CommentExterminator-main
 ```
 
 ---
+
+#### Version 1.0.8 Changelog:
+- Code style: the README examples are indented with tabs instead of four spaces. No functional changes.
 
 #### Version 1.0.7 Changelog:
 - Code style: removed trailing whitespace in the license header. No functional changes.
