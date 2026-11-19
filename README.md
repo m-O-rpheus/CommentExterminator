@@ -1,6 +1,6 @@
 # CommentExterminator
 ## by Markus Jäger
-### Version 1.0.9
+### Version 1.1.0
 
 ---
 
@@ -16,6 +16,8 @@ This approach ensures:
 - predictable behavior for common minification tasks
 
 The class is therefore well suited for preprocessing, build steps, or simple runtime optimizations, where a pragmatic and efficient solution is preferred over heavy or fully compliant parsers.
+
+---
 
 ## Usage Examples
 
@@ -66,6 +68,8 @@ echo $html;
 // Output: <div class="container"> <h1> Hello World </h1> </div>
 ```
 
+---
+
 ## Limitations
 The pattern-based approach does not recognize strings, template literals or regular expression literals. Keep this in mind for the code that is minified:
 - **JavaScript:** a ` //` with whitespace before it inside a string removes the rest of the line (`"see: //example.com"` breaks the code). `//` without whitespace before it, e.g. in `"http://example.com"`, is kept.
@@ -99,6 +103,9 @@ CommentExterminator-main
 ```
 
 ---
+
+#### Version 1.1.0 Changelog:
+- README: a `---` separates every content section. No functional changes.
 
 #### Version 1.0.9 Changelog:
 - README: new section "Requirements" (PHP 8.3 or higher, PHP extensions, PHP settings, browser, repositories, other requirements), structured the same in all repositories. No functional changes.
