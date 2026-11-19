@@ -1,6 +1,6 @@
 # CommentExterminator
 ## by Markus Jäger
-### Version 1.1.0
+### Version 1.1.1
 
 ---
 
@@ -20,7 +20,6 @@ The class is therefore well suited for preprocessing, build steps, or simple run
 ---
 
 ## Usage Examples
-
 **JavaScript Minification**
 ```php
 $js = '
@@ -104,6 +103,10 @@ CommentExterminator-main
 
 ---
 
+#### Version 1.1.1 Changelog:
+- Revised the complete changelog again: checked against the code changes of the commits, completed the entries 1.0.1, 1.0.2 and 1.0.3 (the Git files and the dependency tree of the README), added "No functional changes." to the purely formal version 1.0.1. No functional changes.
+- README: uniform spacing (the text follows a heading directly). No functional changes.
+
 #### Version 1.1.0 Changelog:
 - README: a `---` separates every content section. No functional changes.
 
@@ -131,14 +134,17 @@ CommentExterminator-main
 
 #### Version 1.0.3 Changelog:
 - Added LICENSE file and license info in source code.
+- Added `.gitkeep`.
 - README: Translated to English and added usage examples for JavaScript, CSS and HTML.
 
 #### Version 1.0.2 Changelog:
 - Optimized code: Declared all public methods as final.
 - Breaking change: Class extensions can no longer override the public methods.
+- Added `.gitignore`.
 
 #### Version 1.0.1 Changelog:
 - Optimized code: Added `@var` docblocks before the return statements and consistent spacing.
+- README: added the dependency tree (low-level framework without dependencies). No functional changes.
 
 #### Version 1.0.0 Changelog:
 - Initial release: The public functions remove_inline_comment(), remove_block_comment(), remove_html_comment() and reduce_whitespace_comment() remove comments from HTML, CSS and JavaScript and collapse whitespace.
